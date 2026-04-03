@@ -22,7 +22,12 @@ const HeroSection = () => {
         >
           <div className="flex items-center gap-5 mb-4">
             <Avatar className="h-20 w-20 border-2 border-primary/50">
-              <AvatarImage src={portfolio.avatar} alt={portfolio.name} />
+              <AvatarImage 
+                src={portfolio.avatar.startsWith("http") || portfolio.avatar.startsWith("/") || portfolio.avatar.startsWith("data:") 
+                  ? portfolio.avatar 
+                  : `${import.meta.env.BASE_URL}${portfolio.avatar}`} 
+                alt={portfolio.name} 
+              />
               <AvatarFallback className="bg-primary/20 text-primary text-2xl font-heading">
                 {portfolio.name.split(" ").map(n => n[0]).join("")}
               </AvatarFallback>
