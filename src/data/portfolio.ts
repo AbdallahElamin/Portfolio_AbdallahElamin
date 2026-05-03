@@ -70,6 +70,45 @@ The application was built with a focus on performance and maintainability. By mo
       githubUrl: "https://github.com/AbdallahElamin/yasma-web-app-Stitch",
       demoUrl: "https://abdallahelamin.github.io/yasma-web-app-Stitch/",
     },
+    {
+      id: "tailorvision",
+      title: "TailorVision — Anthropometric Body Measurement Tool",
+      hook: "A professional-grade Python pipeline that extracts 16 tailoring-ready body measurements from just two photos, powered by 3D body model fitting and computer vision.",
+      description: `## Overview
+
+TailorVision is a tailoring-grade anthropometric tool that reconstructs a client's body shape from a front and side photograph, then outputs 16 precise body measurements in centimetres — complete with per-measurement confidence scores and garment-specific ease allowances. It was built to bring the accuracy of a professional fitting session into an automated, reproducible pipeline.
+
+## Key Features
+
+- **Dual-View Measurement Extraction** — Accepts a front and side image of the client and produces 16 standard tailoring measurements, from chest and waist circumferences to arm length and inseam.
+- **Garment-Type Ease Tables** — Automatically applies ease allowances tailored to the target garment: traditional, suit, shirt, or trousers.
+- **Three Scale Modes** — Achieves best accuracy when the client's height is known, with intelligent fallbacks using pixel-heuristic estimation or SMPL-Anthropometry normalisation.
+- **Monte-Carlo Uncertainty Estimates** — Each measurement is accompanied by a ±σ confidence value derived from multiple perturbed model runs.
+- **CLI & Python API** — Fully usable from the command line via \`tailor-vision measure\` or programmatically through a clean Python interface.
+
+## Technical Highlights
+
+The pipeline is built on a PyTorch-based SMPL-X shape fitting engine and the SMPL-Anthropometry measurement library, orchestrated across 8 sequential stages from image validation to garment recommendations.
+
+- **SMPL-X Shape Fitting** — A PyTorch Adam optimiser fits 10 body shape parameters by minimising reprojection loss against 2D keypoints from both views, reinforced with anthropometric soft constraints.
+- **MediaPipe Pose Estimation** — Uses the heavy PoseLandmarker model to extract 33 skeletal keypoints per image, which are then fused into a unified bi-view pose representation.
+- **Modular Architecture** — Each pipeline stage (input, vision, fit, scale, measure, tailor, quality) is independently structured and testable, with a full pytest suite covering all pure-logic components.
+- **Structured JSON Output** — Results are serialised via Pydantic v2 models, capturing measurements, confidence levels, uncertainty values, scale metadata, quality scores, warnings, and tailoring recommendations in a single schema.`,
+      images: [
+        "images/project002/ProjectPic1.png",
+        "images/project002/ProjectPic2.png",
+        "images/project002/ProjectPic3.png",
+        "images/project002/ProjectPic4.png",
+        "images/project002/ProjectPic5.png",
+        "images/project002/ProjectPic6.png",
+        "images/project002/ProjectPic7.png",
+        "images/project002/ProjectPic8.png",
+      ],
+      techStack: ["Python", "PyTorch", "SMPL-X", "MediaPipe", "Pydantic", "Click", "Computer Vision"],
+      githubUrl: "https://github.com/AbdallahElamin/tailoring-grade_anthropometric_Python_tool",
+      demoUrl: "https://abdallahelamin.github.io/anthropometric_tool/",
+    },
+
     //     {
     //       id: "quantum-analytics",
     //       title: "Quantum Analytics",
