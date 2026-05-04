@@ -103,6 +103,7 @@ The pipeline is built on a PyTorch-based SMPL-X shape fitting engine and the SMP
         "images/project002/ProjectPic6.jpg",
         "images/project002/ProjectPic7.jpg",
         "images/project002/ProjectPic8.jpg",
+        "images/project002/ProjectPic9.jpg",
       ],
       techStack: ["Python", "PyTorch", "SMPL-X", "MediaPipe", "Pydantic", "Click", "Computer Vision"],
       githubUrl: "https://github.com/AbdallahElamin/tailoring-grade_anthropometric_Python_tool",
